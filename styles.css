@@ -355,10 +355,85 @@ section {
 }
 
 .hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  margin-top: 40px;
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.hero-actions .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 58px;
+    padding: 0 32px;
+
+    border-radius: 999px;
+
+    font-size: 1rem;
+    font-weight: 800;
+
+    transition: all .3s ease;
+
+    cursor: pointer;
+}
+.hero-actions .btn.primary {
+    background: linear-gradient(
+        135deg,
+        #1f66b7,
+        #123a6f
+    );
+
+    border: 1px solid rgba(255,255,255,.08);
+
+    color: white;
+
+    box-shadow:
+        0 15px 35px rgba(18,58,111,.35),
+        inset 0 1px 0 rgba(255,255,255,.15);
+}
+
+.hero-actions .btn.primary:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 20px 45px rgba(18,58,111,.45),
+        inset 0 1px 0 rgba(255,255,255,.18);
+}
+.hero-actions .btn.secondary {
+    background: rgba(255,255,255,.05);
+
+    backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(255,255,255,.12);
+
+    color: white;
+}
+
+.hero-actions .btn.secondary:hover {
+    background: rgba(255,255,255,.1);
+
+    transform: translateY(-3px);
+
+    border-color: rgba(255,255,255,.22);
+}
+.hero-actions .btn::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255,255,255,.12),
+            transparent
+        );
+
+    opacity: .8;
+
+    pointer-events: none;
 }
 
 .trust-row {
