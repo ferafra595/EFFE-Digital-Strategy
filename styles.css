@@ -334,11 +334,36 @@ section {
   align-items: center;
 }
 
-.hero h1 {
-    font-size: clamp(2.8rem, 4.5vw, 4.8rem);
-    line-height: 0.95;
-    letter-spacing: -0.06em;
-    max-width: 8ch;
+.hero-title-marquee {
+  width: 100%;
+  max-width: 760px;
+  overflow: hidden;
+  padding: 4px 0 10px;
+}
+
+.hero-title-track {
+  display: flex;
+  width: max-content;
+  gap: 48px;
+  animation: titleMarquee 18s linear infinite;
+}
+
+.hero-title-track h1 {
+  white-space: nowrap;
+  font-size: clamp(3.2rem, 7vw, 6.6rem);
+  line-height: 0.92;
+  letter-spacing: -0.075em;
+  font-weight: 900;
+}
+
+@keyframes titleMarquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 .hero-text {
@@ -949,5 +974,18 @@ section {
   .float-wa {
     width: 56px;
     height: 56px;
+  }
+}
+@media (max-width: 850px) {
+  .hero-title-marquee {
+    max-width: 100%;
+  }
+
+  .hero-title-track {
+    animation-duration: 16s;
+  }
+
+  .hero-title-track h1 {
+    font-size: clamp(3rem, 14vw, 5.4rem);
   }
 }
