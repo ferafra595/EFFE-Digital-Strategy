@@ -416,18 +416,39 @@ section {
   z-index: 0;
 }
 
-.panel-inner {
+.panel-content {
+  width: 100%;
   position: relative;
-  z-index: 1;
-  height: 100%;
-  min-height: 568px;
-  border-radius: 0 0 40px 40px;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.018));
+  z-index: 2;
+}
+
+.panel-label {
+  margin-bottom: 18px;
+  color: #9db8dc;
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+}
+
+.panel-tags {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 58px 48px 48px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.panel-tags span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  padding: 0 16px;
+  border-radius: 999px;
+  color: #f7f9fc;
+  font-size: 0.94rem;
+  font-weight: 800;
+  background: rgba(255, 255, 255, 0.075);
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.05);
 }
 
 .panel-inner img {
