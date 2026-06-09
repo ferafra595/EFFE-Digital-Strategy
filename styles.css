@@ -334,36 +334,16 @@ section {
   align-items: center;
 }
 
-.hero-title-marquee {
-  width: 100%;
-  max-width: 760px;
-  overflow: hidden;
-  padding: 4px 0 10px;
+.hero-copy {
+    max-width: 850px;
 }
 
-.hero-title-track {
-  display: flex;
-  width: max-content;
-  gap: 48px;
-  animation: titleMarquee 18s linear infinite;
-}
+.hero h1 {
+    font-size: clamp(4rem, 6vw, 6.5rem);
+    line-height: .9;
+    letter-spacing: -.07em;
 
-.hero-title-track h1 {
-  white-space: nowrap;
-  font-size: clamp(3.2rem, 7vw, 6.6rem);
-  line-height: 0.92;
-  letter-spacing: -0.075em;
-  font-weight: 900;
-}
-
-@keyframes titleMarquee {
-  from {
-    transform: translateX(0);
-  }
-
-  to {
-    transform: translateX(-50%);
-  }
+    max-width: none;
 }
 
 .hero-text {
