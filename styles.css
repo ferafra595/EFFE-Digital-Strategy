@@ -1279,3 +1279,48 @@ body::after {
     transition: none !important;
   }
 }
+/* FIX PERFORMANCE SCROLL - VERSIONE LEGGERA */
+
+body {
+  background: #061225 !important;
+}
+
+body::before,
+body::after {
+  display: none !important;
+}
+
+* {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  filter: none !important;
+}
+
+.reveal {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+.hero-panel::before,
+.hero-panel::after,
+.card::after {
+  display: none !important;
+}
+
+.hero-panel,
+.card,
+.service-box,
+.metric,
+.step,
+.logos-grid article,
+.contact-cards a,
+.instagram-box,
+.map-card {
+  box-shadow: 0 12px 28px rgba(0,0,0,.22) !important;
+}
+
+.site-header {
+  position: sticky;
+  background: #03050a !important;
+}
